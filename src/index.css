@@ -1,0 +1,235 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --accent-color: #FFE600;
+    --bg-primary: #080808;
+    --bg-secondary: #121212;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #080808;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Water balloon organic floating animations */
+@keyframes float-gentle-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--bubble-rot, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(calc(var(--bubble-rot, 0deg) + 1.8deg));
+  }
+}
+
+@keyframes float-gentle-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--bubble-rot, 0deg));
+  }
+  50% {
+    transform: translateY(18px) rotate(calc(var(--bubble-rot, 0deg) - 2deg));
+  }
+}
+
+@keyframes float-gentle-3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--bubble-rot, 0deg));
+  }
+  50% {
+    transform: translateY(-12px) rotate(calc(var(--bubble-rot, 0deg) + 2.5deg));
+  }
+}
+
+@keyframes water-wobble {
+  0%, 100% {
+    border-radius: 28px 26px 30px 24px;
+  }
+  50% {
+    border-radius: 24px 30px 26px 28px;
+  }
+}
+
+.animate-float-1 {
+  animation: float-gentle-1 6.5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-gentle-2 8s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: float-gentle-3 7.2s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-gentle-2 9.5s ease-in-out infinite;
+}
+
+/* Water balloon gloss and refraction effect */
+.water-balloon {
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 0, 0, 0.8),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+/* Vivid Moving Gradient Text Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text-vivid {
+  background: linear-gradient(
+    90deg,
+    #fef08a 0%, /* Pastel Butter Yellow */
+    #a7f3d0 20%, /* Pastel Mint Green */
+    #bae6fd 40%, /* Pastel Sky Blue */
+    #c7d2fe 60%, /* Pastel Soft Lavender */
+    #bbf7d0 80%, /* Pastel Light Green */
+    #fef08a 100% /* Pastel Butter Yellow */
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  animation: gradient-flow 8.5s ease-in-out infinite;
+}
+
+/* Subtle, Deep Luminous Ring Contracting Animation */
+@keyframes ring-shrink {
+  0% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 0;
+  }
+}
+
+/* Initial Burst / Spread Animation from Center on Page Load */
+@keyframes spread-from-center-left {
+  0% {
+    transform: translate(calc(50vw - 100%), calc(50vh - 100%)) scale(0.15);
+    opacity: 0;
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spread-from-center-right {
+  0% {
+    transform: translate(calc(-50vw + 100%), calc(-50vh + 100%)) scale(0.15);
+    opacity: 0;
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-spread-left {
+  animation: spread-from-center-left 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spread-right {
+  animation: spread-from-center-right 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gentle Organic Rotate for Daisy Line Art */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 90s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-slow 120s linear infinite reverse;
+}
+

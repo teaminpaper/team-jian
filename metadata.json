@@ -1,0 +1,6 @@
+{
+  "name": "INPAPER STUDIO",
+  "description": "하이엔드 영상미디어 & 시네마틱 포트폴리오 웹사이트 및 관리자 대시보드 CMS",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
