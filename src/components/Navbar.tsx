@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useStudio } from '../context/StudioContext';
-import { SlidersHorizontal, Eye, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
-  currentTab: 'home' | 'works' | 'contact' | 'about';
-  onNavigate: (tab: 'home' | 'works' | 'contact' | 'about') => void;
+  currentTab: 'home' | 'works' | 'contact';
+  onNavigate: (tab: 'home' | 'works' | 'contact') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
@@ -20,7 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (tab: 'home' | 'works' | 'contact' | 'about') => {
+  const handleNavClick = (tab: 'home' | 'works' | 'contact') => {
     setMobileMenuOpen(false);
     onNavigate(tab);
   };
@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
             />
           </button>
 
-          {/* Zone 2: 4-5 clean single-line text navigation links with active state */}
+          {/* Zone 2: 3 clean single-line text navigation links with active state */}
           <nav className="hidden md:flex items-center gap-8 text-xs tracking-widest font-semibold uppercase">
             <button
               onClick={() => handleNavClick('home')}
@@ -72,14 +72,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
               ARCHIVE
             </button>
             <button
-              onClick={() => handleNavClick('about')}
-              className={`transition-colors cursor-pointer whitespace-nowrap shrink-0 py-1 ${
-                currentTab === 'about' ? 'text-white' : 'text-zinc-500 hover:text-white'
-              }`}
-            >
-              ABOUT
-            </button>
-            <button
               onClick={() => handleNavClick('contact')}
               className={`transition-colors cursor-pointer whitespace-nowrap shrink-0 py-1 ${
                 currentTab === 'contact' ? 'text-white' : 'text-zinc-500 hover:text-white'
@@ -89,34 +81,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
             </button>
           </nav>
 
-          {/* Zone 3: Primary action */}
-          <div className="flex items-center gap-3 shrink-0">
-            {/* Admin CMS Switch Button */}
-            <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className={`flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-none transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 border ${
-                isAdmin
-                  ? 'bg-zinc-800 text-white border-zinc-700 hover:bg-zinc-700'
-                  : 'bg-[var(--accent-color,#FFE600)] text-black border-transparent hover:brightness-110 shadow-sm'
-              }`}
-            >
-              {isAdmin ? (
-                <>
-                  <Eye className="w-3.5 h-3.5" />
-                  <span>사이트 보기</span>
-                </>
-              ) : (
-                <>
-                  <SlidersHorizontal className="w-3.5 h-3.5" />
-                  <span>관리자 대시보드</span>
-                </>
-              )}
-            </button>
-
-            {/* Mobile Menu Toggle */}
+          {/* Zone 3: Mobile Menu Toggle */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none cursor-pointer"
+              className="p-2 text-zinc-400 hover:text-white focus:outline-none cursor-pointer"
               aria-label="메뉴 열기"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -150,15 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
                 <ArrowUpRight className="w-5 h-5 text-zinc-500" />
               </button>
               <button
-                onClick={() => handleNavClick('about')}
-                className={`text-left py-2 transition-colors flex items-center justify-between ${
-                  currentTab === 'about' ? 'text-[var(--accent-color,#FFE600)] font-black' : 'text-white'
-                }`}
-              >
-                <span>ABOUT (소개)</span>
-                <ArrowUpRight className="w-5 h-5 text-zinc-500" />
-              </button>
-              <button
                 onClick={() => handleNavClick('contact')}
                 className={`text-left py-2 transition-colors flex items-center justify-between ${
                   currentTab === 'contact' ? 'text-[var(--accent-color,#FFE600)] font-black' : 'text-white'
@@ -170,20 +130,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
             </div>
           </div>
 
-          <div className="border-t border-zinc-800 pt-6 space-y-4">
+          <div className="border-t border-zinc-800 pt-6">
             <div className="text-xs text-zinc-400">
               <div>{config.contactInfo.email}</div>
               <div className="text-zinc-600 font-mono mt-1">{config.contactInfo.phone}</div>
             </div>
-            <button
-              onClick={() => {
-                setIsAdmin(!isAdmin);
-                setMobileMenuOpen(false);
-              }}
-              className="w-full py-3 text-center text-xs font-bold uppercase tracking-wider bg-[var(--accent-color,#FFE600)] text-black"
-            >
-              {isAdmin ? '실제 웹사이트 화면 보기' : '관리자 대시보드 바로가기'}
-            </button>
           </div>
         </div>
       )}
