@@ -1,0 +1,9 @@
+# Netlify Configuration
+# Disable Netlify Visual Editor / Collaborative Toolbar injection
+[build.environment]
+  NETLIFY_FEEDBACK_DISABLED = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
