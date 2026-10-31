@@ -1,0 +1,46 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep Pure Black Background -->
+  <rect width="1200" height="630" fill="#080808" />
+
+  <!-- 1. Top-Right Main Daisy (Tilted 22deg) -->
+  <g transform="translate(1000, 30) rotate(22 150 150) scale(1.65)">
+    <!-- Center Core -->
+    <circle cx="150" cy="150" r="24" stroke="rgba(255, 230, 0, 0.85)" stroke-width="1.8" fill="rgba(255, 230, 0, 0.15)" />
+    <circle cx="150" cy="150" r="10" fill="rgba(255, 230, 0, 0.4)" />
+    
+    <!-- 8 Rounded Clean Daisy Petals -->
+    <g transform="rotate(0 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(45 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(90 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(135 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(180 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(225 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(270 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(315 150 150)"><path d="M 141 127 C 134 98, 135 52, 150 48 C 165 52, 166 98, 159 127" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></g>
+  </g>
+
+  <!-- 1-B. Floating Baby Daisy Companion -->
+  <g transform="translate(820, 220) rotate(-15 50 50) scale(1.1)">
+    <circle cx="50" cy="50" r="8" stroke="rgba(255, 230, 0, 0.75)" stroke-width="1.4" fill="rgba(255, 230, 0, 0.15)" />
+    <g transform="rotate(0 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+    <g transform="rotate(60 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+    <g transform="rotate(120 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+    <g transform="rotate(180 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+    <g transform="rotate(240 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+    <g transform="rotate(300 50 50)"><path d="M 46 42 C 43 32, 44 16, 50 15 C 56 16, 57 32, 54 42" stroke="rgba(255, 255, 255, 0.55)" stroke-width="1.4" stroke-linecap="round" /></g>
+  </g>
+
+  <!-- 2. Bottom-Left Daisy (Tilted -32deg) -->
+  <g transform="translate(-40, 360) rotate(-32 150 150) scale(1.4)">
+    <circle cx="150" cy="150" r="22" stroke="rgba(255, 230, 0, 0.85)" stroke-width="1.6" fill="rgba(255, 230, 0, 0.15)" />
+    <circle cx="150" cy="150" r="9" fill="rgba(255, 230, 0, 0.35)" />
+    <g transform="rotate(0 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(45 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(90 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(135 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(180 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(225 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(270 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+    <g transform="rotate(315 150 150)"><path d="M 141 128 C 134 100, 135 55, 150 51 C 165 55, 166 100, 159 128" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></g>
+  </g>
+</svg>

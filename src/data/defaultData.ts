@@ -29,10 +29,10 @@ export const DEFAULT_STUDIO_CONFIG: StudioConfig = {
 };
 
 export const DEFAULT_SEO_CONFIG: SEOConfig = {
-  metaTitle: 'INPAPER STUDIO | ARCHIVE 포트폴리오',
-  metaDescription: 'INPAPER STUDIO ARCHIVE - 기획(4) 및 오리지널(6) 숏폼/롱폼 시리즈 영상 포트폴리오.',
-  keywords: 'INPAPER STUDIO, 인페이퍼 스튜디오, 아카이브, 오리지널, 기획, 숏폼, 롱폼, 릴스, 쇼츠, 유튜브',
-  ogImage: '/assets/aistudio/IMG_6013_5dda45fa.JPG',
+  metaTitle: 'INPAPER STUDIO',
+  metaDescription: '',
+  keywords: 'INPAPER STUDIO',
+  ogImage: '/og-daisy.svg',
   analyticsId: 'G-INPAPER2026',
   robotsIndex: true,
 };
